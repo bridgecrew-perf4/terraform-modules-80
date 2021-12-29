@@ -96,7 +96,11 @@ command: []
 args: []
 
 # Additional environment variables for Keycloak
-extraEnv: ""
+extraEnv: 
+  - name: KEYCLOAK_USER
+    value: ${keycloak_user}
+  - name: KEYCLOAK_PASSWORD
+    value: ${keycloak_password}
   # - name: KEYCLOAK_LOGLEVEL
   #   value: DEBUG
   # - name: WILDFLY_LOGLEVEL
